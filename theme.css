@@ -1,0 +1,115 @@
+/* Study Outline 1.0.0. MIT. */
+
+body.theme-light {
+  --background-primary: #f9fbff;
+  --background-primary-alt: #f9fbff;
+  --background-secondary: #eff1fb;
+  --background-secondary-alt: #eff1fb;
+  --background-modifier-form-field: #f9fbff;
+  --background-modifier-border: #8291ac;
+  --background-modifier-border-hover: #8291ac;
+  --background-modifier-border-focus: #244e9a;
+  --background-modifier-hover: color-mix(in srgb, #244e9a 12%, #eff1fb);
+  --background-modifier-active-hover: color-mix(in srgb, #244e9a 18%, #eff1fb);
+  --text-normal: #1d2741;
+  --text-muted: #454e6b;
+  --text-faint: #454e6b;
+  --text-accent: #244e9a;
+  --text-accent-hover: #6a338a;
+  --text-on-accent: #f9fbff;
+  --interactive-accent: #244e9a;
+  --interactive-accent-hover: #6a338a;
+  --text-selection: color-mix(in srgb, #244e9a 25%, #f9fbff);
+  --text-highlight-bg: color-mix(in srgb, #8a4013 23%, #f9fbff);
+  --color-blue: #244e9a;
+  --color-orange: #8a4013;
+  --color-green: #14604c;
+  --color-purple: #6a338a;
+  --code-background: #eff1fb;
+  --code-normal: #1d2741;
+  --code-comment: #454e6b;
+  --code-function: #244e9a;
+  --code-keyword: #6a338a;
+  --code-string: #14604c;
+  --link-color: #244e9a;
+  --link-external-color: #14604c;
+  --icon-color: #454e6b;
+  --nav-item-color: #454e6b;
+  --nav-item-color-active: #1d2741;
+  --tab-text-color: #454e6b;
+}
+body.theme-dark {
+  --background-primary: #1b2034;
+  --background-primary-alt: #1b2034;
+  --background-secondary: #262d48;
+  --background-secondary-alt: #262d48;
+  --background-modifier-form-field: #1b2034;
+  --background-modifier-border: #7e8bb1;
+  --background-modifier-border-hover: #7e8bb1;
+  --background-modifier-border-focus: #a4c8ff;
+  --background-modifier-hover: color-mix(in srgb, #a4c8ff 12%, #262d48);
+  --background-modifier-active-hover: color-mix(in srgb, #a4c8ff 18%, #262d48);
+  --text-normal: #edf1ff;
+  --text-muted: #bfc8e8;
+  --text-faint: #bfc8e8;
+  --text-accent: #a4c8ff;
+  --text-accent-hover: #e2bcff;
+  --text-on-accent: #1b2034;
+  --interactive-accent: #a4c8ff;
+  --interactive-accent-hover: #e2bcff;
+  --text-selection: color-mix(in srgb, #a4c8ff 25%, #1b2034);
+  --text-highlight-bg: color-mix(in srgb, #ffc593 23%, #1b2034);
+  --color-blue: #a4c8ff;
+  --color-orange: #ffc593;
+  --color-green: #a1eabf;
+  --color-purple: #e2bcff;
+  --code-background: #262d48;
+  --code-normal: #edf1ff;
+  --code-comment: #bfc8e8;
+  --code-function: #a4c8ff;
+  --code-keyword: #e2bcff;
+  --code-string: #a1eabf;
+  --link-color: #a4c8ff;
+  --link-external-color: #a1eabf;
+  --icon-color: #bfc8e8;
+  --nav-item-color: #bfc8e8;
+  --nav-item-color-active: #edf1ff;
+  --tab-text-color: #bfc8e8;
+}
+
+body {
+  --h1-size: 2em;
+  --h2-size: 1.65em;
+  --h3-size: 1.38em;
+  --h4-size: 1.22em;
+  --h5-size: 1.10em;
+  --h6-size: 1em;
+  --h1-color: var(--color-blue);
+  --h2-color: var(--color-purple);
+  --h3-color: var(--color-green);
+  --h4-color: var(--color-orange);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-muted);
+  --h1-weight: 750;
+  --h2-weight: 700;
+  --h3-weight: 680;
+  --h4-weight: 650;
+  --h5-weight: 620;
+  --h6-weight: 600;
+  --h6-style: italic;
+}
+
+body { --indentation-guide-color: var(--background-modifier-border); --list-spacing: 0.25em; }
+.markdown-rendered h2 { border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 0.22em; }
+
+.workspace-leaf-content :focus-visible,
+.modal :focus-visible,
+.menu :focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: -2px;
+}
+
+.markdown-rendered .list-bullet::after,
+.markdown-source-view .list-bullet::after {
+  background-color: var(--text-muted);
+}
