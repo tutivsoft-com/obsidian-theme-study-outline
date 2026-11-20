@@ -1,4 +1,4 @@
-/* Study Outline 1.0.0. MIT. */
+/* Study Outline 1.0.1. MIT. */
 
 body.theme-light {
   --background-primary: #f9fbff;
@@ -101,6 +101,10 @@ body {
 
 body { --indentation-guide-color: var(--background-modifier-border); --list-spacing: 0.25em; }
 .markdown-rendered h2 { border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 0.22em; }
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+  padding-inline: 8px;
+}
 
 .workspace-leaf-content :focus-visible,
 .modal :focus-visible,
