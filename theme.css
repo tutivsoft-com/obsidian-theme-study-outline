@@ -1,4 +1,4 @@
-/* Study Outline 3.6.0. MIT. */
+/* Study Outline 3.6.1. MIT. */
 
 body.theme-light {
   --background-primary: #f9fbff;
@@ -6,8 +6,8 @@ body.theme-light {
   --background-secondary: #eff1fb;
   --background-secondary-alt: #eff1fb;
   --background-modifier-form-field: #f9fbff;
-  --background-modifier-border: #8291ac;
-  --background-modifier-border-hover: #8291ac;
+  --background-modifier-border: #7a89a4;
+  --background-modifier-border-hover: #7a89a4;
   --background-modifier-border-focus: #244e9a;
   --background-modifier-hover: color-mix(in srgb, #244e9a 12%, #eff1fb);
   --background-modifier-active-hover: color-mix(in srgb, #244e9a 18%, #eff1fb);
@@ -99,7 +99,12 @@ body {
   --h6-style: italic;
 }
 
-body { --indentation-guide-color: var(--background-modifier-border); --list-spacing: 0.25em; }
+body {
+  --indentation-guide-color: var(--background-modifier-border);
+  --list-marker-color: var(--text-muted);
+  --list-spacing: 0.25em;
+}
+
 .markdown-rendered h2 { border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 0.22em; }
 
 .is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
@@ -111,9 +116,4 @@ body { --indentation-guide-color: var(--background-modifier-border); --list-spac
 .menu :focus-visible {
   outline: 2px solid var(--text-accent);
   outline-offset: -2px;
-}
-
-.markdown-rendered .list-bullet::after,
-.markdown-source-view .list-bullet::after {
-  background-color: var(--text-muted);
 }
