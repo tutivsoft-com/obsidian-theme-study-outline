@@ -2,7 +2,7 @@
 
 An Obsidian theme with a clear heading hierarchy and easy-to-scan study notes. It supports light and dark modes and styles all six heading levels, list markers, and indentation guides.
 
-Source version 3.6.1. The published 3.6.0 release was tested in Obsidian 1.15.1 on Windows.
+Source version 3.6.2. The published 3.6.0 release was tested in Obsidian 1.15.1 on Windows. See the [UI test report](docs/ui-qa/2026-11-24/README.md) for the current source version.
 
 ## Preview
 

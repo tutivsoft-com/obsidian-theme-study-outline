@@ -72,6 +72,12 @@ class ThemeTests(unittest.TestCase):
                 ):
                     with self.subTest(mode=mode, surface=surface, foreground=foreground):
                         self.assertGreaterEqual(contrast(palette[foreground], palette[surface]), minimum)
+            for foreground in (
+                "--code-normal", "--code-comment", "--code-function",
+                "--code-keyword", "--code-operator", "--code-string",
+            ):
+                with self.subTest(mode=mode, surface="--code-background", foreground=foreground):
+                    self.assertGreaterEqual(contrast(palette[foreground], palette["--code-background"]), 4.5)
 
     def test_list_markers_keep_native_hover_and_collapse_styles(self):
         settings = self.rules["body"]
@@ -80,6 +86,12 @@ class ThemeTests(unittest.TestCase):
         for selector, declarations in self.rules.items():
             if ".list-bullet" in selector:
                 self.assertNotIn("background-color", declarations)
+
+    def test_editor_focus_outline_stays_clear_of_text(self):
+        editor_focus = self.rules[".workspace-leaf-content .cm-content:focus-visible"]
+        offset = editor_focus["outline-offset"]
+        self.assertRegex(offset, r"^[1-9][0-9]*px$")
+
 
     def test_readme_assets_exist_at_the_documented_paths(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

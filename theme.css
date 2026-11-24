@@ -1,4 +1,4 @@
-/* Study Outline 3.6.1. MIT. */
+/* Study Outline 3.6.2. MIT. */
 
 body.theme-light {
   --background-primary: #f9fbff;
@@ -30,6 +30,7 @@ body.theme-light {
   --code-comment: #454e6b;
   --code-function: #244e9a;
   --code-keyword: #6a338a;
+  --code-operator: #a4283f;
   --code-string: #14604c;
   --link-color: #244e9a;
   --link-external-color: #14604c;
@@ -68,6 +69,7 @@ body.theme-dark {
   --code-comment: #bfc8e8;
   --code-function: #a4c8ff;
   --code-keyword: #e2bcff;
+  --code-operator: #ff8e91;
   --code-string: #a1eabf;
   --link-color: #a4c8ff;
   --link-external-color: #a1eabf;
@@ -116,4 +118,8 @@ body {
 .menu :focus-visible {
   outline: 2px solid var(--text-accent);
   outline-offset: -2px;
+}
+
+.workspace-leaf-content .cm-content:focus-visible {
+  outline-offset: 2px;
 }
